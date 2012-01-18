@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf8">
+        <title>
+            双拼练习器 v0.1
+        </title>
+        <LINK href="shuangpin.css" type=text/css rel=stylesheet>
+    </head>
+	
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="shuangpin.js"></script>
+    
+    <body onload="pinyin.init()">
+        <div>
+            <sapn id="status">
+                </span>
+        </div>
+        <div id="lexical" class="center"></div>
+        <div class="center">
+            <input id='inputbox' type='text' autofocus="autofocus"/>
+        </div>
+        <div id='hint' class="center">
+            <br/>
+        </div>
+        <div class="center">
+            <canvas id='keyboard'>
+            </canvas>
+        </div>
+		<img id='keyboard_pic' src="keyboard.gif" />
+        <pre class='center'>
+		Zei Ying Qiu Nin Fen Ii W.ua.ia Ee　　　　　 
+		贼　应 　求　您　分　吃 蛙　鸭 鹅， 　　　 
+		T.ve Song Uu Lai Vui Ruan+ Mian Xie,　　　　 
+		特约 松 　鼠　来　追　软 　　棉　 鞋，　　　　 
+		C.iao (Y) Hang P.un.vn,Geng Kao B.ou J.an D.uang.iang. 
+		此要 (外)　行　破文韵，　更 靠　笔偶 结案 得 汪 　洋
+            </pre>
+			<div class="center">
+				<a href="http://weibo.com/u/1840053881">反馈</a>&nbsp;&nbsp;<a href="#" onclick="alert('alt+enter 清空记录')">帮助</a>
+			<div/>
+    </body>
+</html>

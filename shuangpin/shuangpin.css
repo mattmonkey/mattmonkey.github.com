@@ -1,0 +1,33 @@
+
+	input {
+		font-size:50px;
+		text-align:center;
+	}
+
+	img {
+		margin-top:80px;
+		display:none;
+	}
+	
+	#lexical {
+		margin-top:30px;
+		font-size:35px;
+	}
+
+	#status {
+		;border-bottom:dashed 1px #990000;text-align:right
+	}
+	
+	.bottom {
+		background:blue;border:dashed 1px #990000;
+		height=15px;
+		text-align:center;
+	}
+
+	.center {
+		text-align:center;
+	}
+
+	canvas {
+		margin-top:50px
+	}
