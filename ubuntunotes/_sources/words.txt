@@ -1,5 +1,0 @@
-- PRM
-
-    ::
-        
-        Redhat Package Manager

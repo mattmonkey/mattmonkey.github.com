@@ -261,10 +261,12 @@ auto</td></tr>
 </div>
 <div class="section" id="chmod">
 <h2>chmod<a class="headerlink" href="#chmod" title="Permalink to this headline">¶</a></h2>
-<p>设置读写权限对file的所有者，清空所有权限对file的用户组和其他用户</p>
+<p>设置读写权限对文件的所有者，清空所有权限对file的用户组和其他用户</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">chmod</span> <span class="n">u</span><span class="o">=</span><span class="n">rw</span><span class="p">,</span><span class="n">go</span><span class="o">=</span> <span class="nb">file</span>
 </pre></div>
 </div>
+<p>对目录docs和其子目录层次结构中的所有文件增加所有用户的读权限，而对用户组和其他用户删除读权限</p>
+<p>chmod -R u+r,go-r docs</p>
 </div>
 </div>
 
