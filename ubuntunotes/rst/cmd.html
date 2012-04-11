@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>常用 &mdash; ubuntu notes 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="ubuntu notes 0.1 documentation" href="../index.html" />
+    <link rel="next" title="设置源" href="INSTALL.html" />
+    <link rel="prev" title="Welcome to ubuntu notes’s documentation!" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="INSTALL.html" title="设置源"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to ubuntu notes’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ubuntu notes 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>常用<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="iso">
+<h2>挂载ISO到光盘<a class="headerlink" href="#iso" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><strong>mount</strong> 挂载命令</li>
+<li><strong>umount</strong> 卸载命令</li>
+<li><strong>-o loop</strong> 指定选项,挂载loop设备[1]_。默认是只读</li>
+</ul>
+</div></blockquote>
+<div class="highlight-bash"><div class="highlight"><pre>sudo mount -tiso9660 -o loop /home/matt/precise-desktop-i386.iso /cdrom
+sudo mount -tiso9660 -o loop,rw /home/matt/precise-desktop-i386.iso /cdrom
+sudo umount /cdrom
+</pre></div>
+</div>
+</div>
+<div class="section" id="gztgzbz2">
+<h2>解压gz、tgz、bz2<a class="headerlink" href="#gztgzbz2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>bz2比gz <strong>更小</strong></li>
+</ul>
+<div class="highlight-python"><pre>tar xvzf file.tar.gz
+tar jvzf file.tar.bz2
+tar xvzf file.tgz</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="sources-lst">
+<h2>向sources.lst添加光盘源<a class="headerlink" href="#sources-lst" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-python"><pre>sudo apt-cdrom -d /cdrom -m -o=Dir::Media::MountPath=/cdrom add</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>查询软件包包含的文件<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><dl class="docutils">
+<dt>::</dt>
+<dd>dpkg -L pkgname</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>启动更新管理器<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">update</span><span class="o">-</span><span class="n">manager</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2>启动更新服务器（升级）<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">update</span><span class="o">-</span><span class="n">manger</span> <span class="o">-</span><span class="n">d</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2>检索历史命令(显示行号)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-python"><pre>cat -b ~/.bash_history | grep ls
+!123</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>按日期备份<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-python"><pre>tar cPizvf backup-`date +%Y%M%d-%S`.tar.gz /var/cache/apt/archives --exclude=/var/cache/apt/archivesapartial/* --exclude=/var/cache/apt/archives/lock</pre>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="git">
+<h1>git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id7">
+<h2>git重置提交者<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-python"><pre>git commit --amend --reset-author</pre>
+</div>
+</div></blockquote>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><strong>The Linux loop device</strong> can be used to handle this - it makes a file look like a filesystem, and the file can be defined as a byte offset from the beginning of a primary partition</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">常用</a><ul>
+<li><a class="reference internal" href="#iso">挂载ISO到光盘</a></li>
+<li><a class="reference internal" href="#gztgzbz2">解压gz、tgz、bz2</a></li>
+<li><a class="reference internal" href="#sources-lst">向sources.lst添加光盘源</a></li>
+<li><a class="reference internal" href="#id2">查询软件包包含的文件</a></li>
+<li><a class="reference internal" href="#id3">启动更新管理器</a></li>
+<li><a class="reference internal" href="#id4">启动更新服务器（升级）</a></li>
+<li><a class="reference internal" href="#id5">检索历史命令(显示行号)</a></li>
+<li><a class="reference internal" href="#id6">按日期备份</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#git">git</a><ul>
+<li><a class="reference internal" href="#id7">git重置提交者</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">Welcome to ubuntu notes&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="INSTALL.html"
+                        title="next chapter">设置源</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/rst/cmd.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="INSTALL.html" title="设置源"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to ubuntu notes’s documentation!"
+             >previous</a> |</li>
+        <li><a href="../index.html">ubuntu notes 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, mattmonkey.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

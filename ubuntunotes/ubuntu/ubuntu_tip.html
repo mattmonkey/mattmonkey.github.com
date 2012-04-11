@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4. 其他 &mdash; ubuntu notes 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="ubuntu notes 0.1 documentation" href="../index.html" />
+    <link rel="next" title="5. 名词解释" href="words.html" />
+    <link rel="prev" title="3. 疑难解决" href="ubuntu_solved.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="words.html" title="5. 名词解释"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ubuntu_solved.html" title="3. 疑难解决"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ubuntu notes 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>4. 其他<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="software">
+<h2>4.1. software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<p>Amule</p>
+<blockquote>
+<div><div class="highlight-python"><pre>ed2k://server|no1.eserver.emule.org.cn|8080|
+ed2k://server|no2.eserver.emule.org.cn|8080|
+http://www.emule.org.cn/server.met</pre>
+</div>
+</div></blockquote>
+<p>LightDM</p>
+<blockquote>
+<div><div class="highlight-python"><pre>Light Display Manager
+
+sudo apt-add-repository ppa:claudiocn/slm
+sudo apt-get update
+sudo apt-get install simple-lightdm-manager</pre>
+</div>
+</div></blockquote>
+<p>wallpaper</p>
+<blockquote>
+<div><div class="highlight-python"><pre>设置墙纸的图片
+
+/home/matt/.cache/gnome-control-center/backgrounds
+
+gconftool-2 -t str --set /desktop/gnome/background/picture_filename "Path to the image file"</pre>
+</div>
+</div></blockquote>
+<p>ubuntu-tweak</p>
+<blockquote>
+<div><div class="highlight-python"><pre>sudo add-apt-repository ppa:tualatrix/ppa
+sudo apt-get update
+sudo apt-get install ubuntu-tweak</pre>
+</div>
+</div></blockquote>
+<p>Wallcn</p>
+<blockquote>
+<div><div class="highlight-python"><pre>软件中心
+随机更换图片</pre>
+</div>
+</div></blockquote>
+<p>PySDM</p>
+<blockquote>
+<div><div class="highlight-python"><pre>启动时自动挂载分区</pre>
+</div>
+</div></blockquote>
+<p>xdg-user-dirs</p>
+<blockquote>
+<div><div class="highlight-python"><pre>定制Downloads、Documents等目录的语言</pre>
+</div>
+</div></blockquote>
+<p>classicmenu-indicator</p>
+<blockquote>
+<div><div class="highlight-python"><pre>sudo apt-add-repository ppa:diesch/testing
+sudo apt-get update
+sudo apt-get install classicmenu-indicator</pre>
+</div>
+</div></blockquote>
+<p>source</p>
+<blockquote>
+<div><p><a class="reference external" href="http://mirrors.163.com/">163</a></p>
+<div class="highlight-python"><pre>编辑/etc/apt/sources.list文件, 在文件最前面添加以下条目(操作前请做好相应备份)
+
+deb http://mirrors.163.com/ubuntu/ karmic main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ karmic-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ karmic-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ karmic-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ karmic-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ karmic main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ karmic-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ karmic-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ karmic-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ karmic-backports main restricted universe multiverse</pre>
+</div>
+</div></blockquote>
+<p>Epiphany</p>
+<blockquote>
+<div><div class="highlight-python"><pre>首先需要Epiphany 3.2.0,可以通过WebUpd8 GNOME 3 PPA获取:
+
+sudo add-apt-repository ppa:webupd8team/gnome3
+sudo apt-get update
+sudo apt-get install epiphany-browser</pre>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">4. 其他</a><ul>
+<li><a class="reference internal" href="#software">4.1. software</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ubuntu_solved.html"
+                        title="previous chapter">3. 疑难解决</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="words.html"
+                        title="next chapter">5. 名词解释</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/ubuntu/ubuntu_tip.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="words.html" title="5. 名词解释"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ubuntu_solved.html" title="3. 疑难解决"
+             >previous</a> |</li>
+        <li><a href="../index.html">ubuntu notes 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, mattmonkey.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

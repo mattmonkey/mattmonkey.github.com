@@ -1,0 +1,16 @@
+*******************
+名词解释
+*******************
+
+.. sphinx markup
+.. glossary::
+
+    PRM 
+        Redhat Package Manager
+
+
+    LTS
+        Long-Term Support
+
+    tar
+        档案管理
